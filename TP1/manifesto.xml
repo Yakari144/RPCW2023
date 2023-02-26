@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifesto>
+    <meta>
+        <título>TPC2</título>
+        <data>2023-02-26</data>
+        <autor>
+            <nome>João Luís Santos</nome>
+            <id>PG50477</id>
+            <gitlink>https://github.com/Yakari144/RPCW2023</gitlink>
+        </autor>
+        <uc>RPCW</uc>
+    </meta>
+    <resumo>
+    <h1>Tarefa 1</h1>
+    <p>Na funcao separaArqs do ficheiro processa.py obtive todos os elementos "arqelem" usando BeautifulSoup e escrevi-os cada um nos seu respetivo ficheiro</p>
+    <h1>Tarefa 2</h1>
+    <p>No ficheiro servidor.js crio o servidor que tendo em conta o url recebido vai buscar o ficheiro correspondente e envia-o</p>
+    </resumo>
+    <resultados>
+        <resultado path="processa.py">Ficheiro com a Tarefa 1</resultado>
+        <resultado path="servidor.js">Servidor Node com a Tarefa 2</resultado>
+    </resultados>
+</manifesto>
