@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifesto>
+    <meta>
+        <título>TP3</título>
+        <data>2023-03-05</data>
+        <autor>
+            <nome>João Luís Santos</nome>
+            <id>PG50477</id>
+            <gitlink>https://github.com/Yakari144/RPCW2023</gitlink>
+        </autor>
+        <uc>RPCW</uc>
+    </meta>
+    <resumo>
+    <h1>Tarefa 1</h1>
+    <p>No ficheiro tpc.js creei o servidor que responde aos variados pedidos do tipo GET</p>
+    <h1>Tarefa 2</h1>
+    <p>No ficheiro pessoa.js tem as variadas funções que criam as paginas HTML para as variadas funcionalidades e também funções auxiliares</p>
+    </resumo>
+    <resultados>
+        <resultado path="tpc.js">Servidor Node com a Tarefa 1</resultado>
+        <resultado path="pessoa.js">Ficheiro gerador com a Tarefa 2</resultado>
+    </resultados>
+</manifesto>

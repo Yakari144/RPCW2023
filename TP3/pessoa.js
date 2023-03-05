@@ -26,13 +26,14 @@ exports.pessoasPage = function(lista){
     
     for (let i = 0; i < lista.length; i++){
         paginaHTML+=`
-                        <tr>
+                        <tr onclick="window.location.href='/individuo/${lista[i].id.substring(1)}';">
                             <td>${lista[i].id}</td>
                             <td>${lista[i].nome}</td>
                             <td>${lista[i].idade}</td>
                             <td>${lista[i].sexo}</td>
                             <td>${lista[i].morada.cidade}</td>
                         </tr>
+                    </a>
         `
     }
                 
@@ -146,32 +147,34 @@ exports.pessoa=function(p){
     return paginaHTML
 }
 
-exports.desportos=function(ds,cs){
+exports.listas=function(name,ts){
     var paginaHTML = `
     <!DOCTYPE html>
     <html>
         <head>
             <meta charset="UTF-8"/>
             <link rel="stylesheet" href="w3.css">
-            <title>Desportos...</title>
+            <title>${firstToUpper(name)}...</title>
         </head>
         <body>
             <div class="w3-card-4">
                 <header class="w3-container w3-teal">
-                    <h1>Desportos</h1>
+                    <h1>${firstToUpper(name)}</h1>
                 </header>
 
                 <div class="w3-container">
                     <table>
                         <tr>
                             <td width="30%" valign="top">
-                                <a name="desportos"/>
+                                <a name="${name}"/>
                                 <!-- Lista com o índice -->
                                 <ul>`
-    for (let i = 0; i < ds.length; i++){
+    for (let i = 0; i < ts.length; i++){
         paginaHTML+=`
                                     <li>
-                                        <h3>${ds[i]} : ${cs[i]}</h3> 
+                                        <a href="http://localhost:7777/${name}/${ts[i].atr}">
+                                            <h3>${firstToUpper(ts[i].atr)} : ${ts[i].count}</h3> 
+                                        </a>
                                     </li>
         `
     }
@@ -215,4 +218,48 @@ function lista(titulo,lista){
 
     return paginaHTML
     
+}
+
+exports.index=function(){
+    var paginaHTML = `
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8"/>
+            <link rel="stylesheet" href="w3.css">
+            <title>About People...</title>
+        </head>
+        <body>
+            <div class="w3-card-4">
+                <header class="w3-container w3-teal">
+                    <h1>Página Inicial</h1>
+                </header>
+
+                <div class="w3-container">
+                    <a href="http://localhost:7777/lista">
+                        <h2>Lista de Individuos</h2>
+                    </a><br>
+                    <a href="http://localhost:7777/sexo">
+                        <h2>Distribuição de individuos por sexo</h2>
+                    </a><br>
+                    <a href="http://localhost:7777/desportos">
+                        <h2>Distribuição de individuos por desporto</h2>
+                    </a><br>
+                    <a href="http://localhost:7777/profissao">
+                        <h2>Top 10 profissoes</h2>
+                    </a><br>
+
+                </div>
+                <footer class="w3-container w3-teal">
+                    <h5>Generated in RPCW2023</h5>
+                </footer>
+            </div>
+        </body>
+    </html>
+    `
+    return paginaHTML
+}
+
+function firstToUpper(str){
+    return str.charAt(0).toUpperCase() + str.slice(1)
 }

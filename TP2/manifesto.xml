@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifesto>
     <meta>
-        <título>TPC1</título>
-        <data>2023-02-18</data>
+        <título>TP2</título>
+        <data>2023-02-26</data>
         <autor>
             <nome>João Luís Santos</nome>
             <id>PG50477</id>
@@ -11,15 +11,13 @@
         <uc>RPCW</uc>
     </meta>
     <resumo>
-    <h1>Mapa Virtual</h1>
-    <p>Ao ficheiro python utilizado na aula foram adicionadas para cada cidade as ligacoes para as outras e a distancia a que cada uma das outras se encontra</p>
-    <h1>Hungria</h1>
-    <p>Criei uma pagina Web similar à pagina da aula mas com cidades da hungria e os seus respetivos dados</p>
+    <h1>Tarefa 1</h1>
+    <p>Na funcao separaArqs do ficheiro processa.py obtive todos os elementos "arqelem" usando BeautifulSoup e escrevi-os cada um nos seu respetivo ficheiro</p>
+    <h1>Tarefa 2</h1>
+    <p>No ficheiro servidor.js crio o servidor que tendo em conta o url recebido vai buscar o ficheiro correspondente e envia-o</p>
     </resumo>
     <resultados>
-        <resultado path="hungary/geraHTML.py">Ficheiro Gerador da Hungria</resultado>
-        <resultado path="hungary/hu.html">Ficheiro HTML da Hungria</resultado>
-        <resultado path="mapa/geraHTML.py">Ficheiro Adaptado das aulas</resultado>
-        <resultado path="mapa/mapa.html">HTML alterado das aulas</resultado>
+        <resultado path="processa.py">Ficheiro com a Tarefa 1</resultado>
+        <resultado path="servidor.js">Servidor Node com a Tarefa 2</resultado>
     </resultados>
 </manifesto>
