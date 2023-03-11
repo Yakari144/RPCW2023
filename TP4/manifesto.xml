@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifesto>
+    <meta>
+        <título>TP4</título>
+        <data>2023-03-23</data>
+        <autor>
+            <nome>João Luís Santos</nome>
+            <id>PG50477</id>
+            <gitlink>https://github.com/Yakari144/RPCW2023</gitlink>
+        </autor>
+        <uc>RPCW</uc>
+    </meta>
+    <resumo>
+    <h1>Tarefa 1</h1>
+    <p>Comecei por criar o ficheiro tasks.json que irá servir de base de dados para a nossa aplicacao.
+     Tomei a abordagem de ser apenas uma lista de tarefas e cada tarefa possui um campo que me permite saber se esta ja foi concluida ou nao.</p>
+    <h1>Tarefa 2</h1>
+    <p>No ficheiro servidor.js criei o servidor que responde aos variados pedidos. Estes pedidos podem ser do tipo GET ou POST.
+     Sendo uma SPA apenas existe 1 pedido GET, no entanto, criei os seguintes pedidos POST: /delete, /done, /undone. Desta forma,
+     é possivel corresponder às funcionalidades de assinalar uma tarefa como concluida, voltar a colocar a tarefa na ToDo list e eliminar a mesma.</p>
+    <h1>Tarefa 3</h1>
+    <p>O ficheiro templates.js encontra-se dividido em 5 funcoes auxiliares e 1 principal. As funcoes auxiliares são: header, forms, todo, done e footer.
+     Estas permitem manter o codigo organizado e cada uma das mesmas corresponde a um w3-card. A funcao principal index faz apenas a juncao do HTML das auxiliares e exporta-o</p>
+    </resumo>
+    <resultados>
+        <resultado path="tasks.js">Ficheiro json com os dados</resultado>
+        <resultado path="servidor.js">Servidor Node com a Tarefa 2</resultado>
+        <resultado path="templates.js">Ficheiro gerador com a Tarefa 3</resultado>
+    </resultados>
+</manifesto>
