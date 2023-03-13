@@ -1,0 +1,103 @@
+extends layout
+
+block forms
+  .w3-card-4
+    header.w3-container.w3-teal
+      if f 
+        h2 Edit Task
+      else
+        h2 Add Task    
+    form.w3-container(method="POST")
+      br
+      label Date Dued
+      if f 
+        input.w3-hide(type="text" name="id" value=o.id)
+        input.w3-input.w3-round(type="date" name="date" value=o.date)  
+        label Who:
+        input.w3-input.w3-round(type="text" name="who" value=o.who)
+        label Description:
+        input.w3-input.w3-round(type="text" name="description" value=o.description)
+        input.w3-hide(type="text" name="func" value="editForms")
+        input.w3-hide(type="text" name="doneAt" value=o.doneAt)
+        br
+        button.w3-btn.w3-teal.w3-mb-2(type="submit") Add
+        button.w3-btn.w3-teal.w3-mb-2(type="cancel") Cancel
+      else
+        input.w3-input.w3-round(type="date" name="date")
+        label Who:
+        input.w3-input.w3-round(type="text" name="who")
+        label Description:
+        input.w3-input.w3-round(type="text" name="description")
+        input.w3-hide(type="text" name="func" value="add")
+        br
+        button.w3-btn.w3-teal.w3-mb-2(type="submit") Add
+
+block todo
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1 ToDo
+
+    .w3-container
+      table.w3-table-all
+        tr
+          th Date Dued
+          th Who
+          th Description
+          th 
+        each t in tasks
+          if t.doneAt == ""
+            tr
+              td= t.date
+              td= t.who
+              td= t.description
+              td
+                form(method="POST")
+                  input.w3-hide(type="text" name="func" value="delete")
+                  input.w3-hide(type="text" name="id" value=t.id)
+                  button.w3-btn(type="submit") Delete
+              td
+                form(method="POST")
+                  input.w3-hide(type="text" name="func" value="done")
+                  input.w3-hide(type="text" name="id" value=t.id)
+                  input.w3-hide(type="text" name="date" value=d)
+                  button.w3-btn(type="submit") Do
+              td
+                form(method="GET")
+                  input.w3-hide(type="text" name="func" value="edit")
+                  input.w3-hide(type="text" name="id" value=t.id)
+                  button.w3-btn(type="submit") Edit
+
+block done
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1 Completed
+
+    .w3-container
+      table.w3-table-all
+        tr
+          th Date Dued
+          th Who
+          th Description
+          th Completed At
+        each t in tasks 
+          if t.doneAt != ""
+            tr
+              td= t.date
+              td= t.who
+              td= t.description
+              td= t.doneAt
+              td
+                form(method="POST")
+                  input.w3-hide(type="text" name="func" value="delete")
+                  input.w3-hide(type="text" name="id" value=t.id)
+                  button.w3-btn(type="submit") Delete
+              td
+                form(method="POST")
+                  input.w3-hide(type="text" name="func" value="undone")
+                  input.w3-hide(type="text" name="id" value=t.id)
+                  button.w3-btn(type="submit") Undo
+              td
+                form(method="GET")
+                  input.w3-hide(type="text" name="func" value="edit")
+                  input.w3-hide(type="text" name="id" value=t.id)
+                  button.w3-btn(type="submit") Edit

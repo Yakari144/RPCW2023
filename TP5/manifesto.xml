@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifesto>
+    <meta>
+        <título>TP5</título>
+        <data>2023-03-13</data>
+        <autor>
+            <nome>João Luís Santos</nome>
+            <id>PG50477</id>
+            <gitlink>https://github.com/Yakari144/RPCW2023</gitlink>
+        </autor>
+        <uc>RPCW</uc>
+    </meta>
+    <resumo>
+    <h1>Tarefa 1</h1>
+    <p>Criar o ficheiro index.pug com o codigo HTML do TP4, separado por varios blocos e ajustavel</p>
+    <h1>Tarefa 2</h1>
+    <p>Implementar, ajustando o codigo javascript do ficheiro templates.js do TP4, no ficheiro index.js e no ficheiro tasks.js</p>
+    </resumo>
+    <resultados>
+        <resultado path="controllers/tasks.js">Ficheiro javascript que efetua os pedidos ao axios</resultado>
+        <resultado path="routes/index.js">Ficheiro javascript que trata dos pedidos do site</resultado>
+        <resultado path="views/index.pug">Ficheiro pug equivalente ao HTML da aula anterior</resultado>
+    </resultados>
+</manifesto>
