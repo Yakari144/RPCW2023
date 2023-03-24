@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifesto>
+    <meta>
+        <título>TP6</título>
+        <data>2023-03-24</data>
+        <autor>
+            <nome>João Luís Santos</nome>
+            <id>PG50477</id>
+            <gitlink>https://github.com/Yakari144/RPCW2023</gitlink>
+        </autor>
+        <uc>RPCW</uc>
+    </meta>
+    <resumo>
+    <h1>Tarefa 1</h1>
+    <p>Criar aplicação para o dataset de pessoas</p>
+    </resumo>
+    <resultados>
+        <resultado path="controllers/pessoas.js">Ficheiro javascript que efetua os pedidos ao model</resultado>
+        <resultado path="models/pessoas.js">Ficheiro javascript que efetua os pedidos à base de dados através do mongoose</resultado>
+        <resultado path="routes/index.js">Ficheiro javascript que trata dos pedidos do site</resultado>
+        <resultado path="views/">Diretoria na qual se encontram todos os ficheiros pug para a produção do website</resultado>
+    </resultados>
+</manifesto>

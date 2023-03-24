@@ -9,7 +9,6 @@ router.get('/', function(req, res, next) {
   if('func' in req.query){
     flag = (req.query.func == "edit")
   }
-  console.log("flag: ",flag)
   Task.list()
     .then(t => {
       var obj={}
@@ -31,7 +30,6 @@ router.post('/', function(req, res, next) {
   if(req.body.func == "undone"){
   Task.undo(req.body.id)
     .then(t => {
-      console.log(t)
       res.render('index', { tasks: t, d: data })
     })
     .catch(erro =>{
